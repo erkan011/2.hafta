@@ -262,4 +262,40 @@ Sonuç olarak, null değer almış bir değişken bellekte yer kaplamaz çünkü
 -------------------
 
 
+12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+
+Nullable bir değişkenle çalışırken, genellikle aşağıdaki operatörleri kullanırız:
+
+    Null Koalesans Operatörü (?:): Null koalesans operatörü, nullable bir değişkenin null olup olmadığını kontrol eder ve null ise varsayılan bir değer döndürür. Örneğin:
+
+    kotlin
+
+val result = nullableVariable ?: defaultValue
+
+Bu operatör, nullable bir değişkenin null olup olmadığını kontrol eder. Eğer nullable değişken null ise, defaultValue değerini döndürür. Null değilse, nullable değişkenin değerini döndürür.
+
+Null Güvenli Çağırma Operatörü (?.): Null güvenli çağırma operatörü, nullable bir değişkene çağrı yapıldığında null olup olmadığını kontrol eder. Eğer nullable değişken null ise, çağrı yapılmaz ve null döner. Örneğin:
+
+kotlin
+
+    val length = nullableString?.length
+
+    Bu operatör, nullableString değişkeninin null olup olmadığını kontrol eder. Eğer null değilse, length değişkenine nullable değişkenin uzunluğunu atar. Null ise, length değişkenine null atar.
+
+    Null atama Operatörü (!!): Null atama operatörü, bir nullable değişkenin null olup olmadığını kontrol eder. Eğer nullable değişken null ise, null referans hatası (NullPointerException) oluşturur. Bu operatörü kullanmak genellikle tavsiye edilmez çünkü null referans hatalarına neden olabilir ve kodunuzun güvenilirliğini azaltabilir.
+
+Bu operatörlerin kullanım farkları şunlardır:
+
+    Null koalesans operatörü, nullable bir değişkenin null olup olmadığını kontrol eder ve null ise bir varsayılan değer döndürür. Null güvenli çağırma operatörü ise nullable bir değişkene çağrı yapıldığında null olup olmadığını kontrol eder ve null ise çağrı yapılmaz.
+    Null atama operatörü, bir nullable değişkenin null olup olmadığını kontrol eder ve null ise null referans hatası oluşturur.
+
+Hangi operatörün kullanılması daha anlamlı olduğu, duruma ve gereksinimlere bağlıdır. Genellikle, null koalesans operatörü ve null güvenli çağırma operatörü, nullable değişkenlerle çalışırken daha güvenli ve temiz bir kod yazmanıza olanak tanır. Null atama operatörünün kullanımı ise genellikle tavsiye edilmez çünkü null referans hatalarına neden olabilir.
+
+
+
+-------------------
+
+
+
 
