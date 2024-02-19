@@ -221,4 +221,25 @@ Ancak, bu tip çıkarımı nullable (null alabilir) türlerle çalışırken dik
 -------------------
 
 
+10.İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+
+İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından önemli farklar vardır. İşte bazı önemli farklar:
+
+    Bellek Tüketimi: Nullable olmayan (non-nullable) ilkel bir değişken, null değer alamaz ve bu nedenle daha az bellek tüketir. Çünkü bu değişkenler sadece belirli bir türdeki değerleri saklar ve null değerler için ekstra bellek ayırmazlar. Öte yandan, nullable olan bir ilkel değişken, null değer alabilir ve bu durumda bellekte ilave bir referans değeri tutmak için daha fazla bellek tüketir.
+
+    Bellek Yönetimi Karmaşıklığı: Nullable olmayan ilkel bir değişken, null değer alamaz, bu nedenle null referans hatalarıyla ilgili bellek yönetimi sorunlarına sahip olmaz. Bununla birlikte, nullable olan bir ilkel değişken null değer alabilir ve bu durumda null referans hataları oluşabilir. Bu nedenle, nullable değişkenlerle çalışırken, null kontrolleri yapmak ve doğru şekilde ele almak önemlidir.
+
+    Garbage Collection Etkisi: Nullable olan değişkenlerin null değer alması, garbage collection (çöp toplama) mekanizmasının daha fazla bellek işlemesi gerektirebilir. Çünkü null değer alan değişkenler, bellekte gereksiz referansları tutarlar ve bu referanslar garbage collection tarafından temizlenmelidir. Bu durum, bellek yönetimi açısından bir miktar ek iş yükü oluşturabilir.
+
+    Performans: Nullable değişkenlerin null değer alması, kodun performansını etkileyebilir. Özellikle, null kontrolü yapılmadan nullable değişkenlerle işlem yapılması durumunda, null referans hataları oluşabilir ve bu hatalar programın performansını düşürebilir.
+
+Özet olarak, nullable olmayan ilkel bir değişken null değer alamaz ve bu nedenle bellek yönetimi açısından daha verimli olabilir. Ancak, nullable olan bir ilkel değişken null değer alabilir ve bu durumda bellek tüketimi artabilir ve bellek yönetimi karmaşıklığı ortaya çıkabilir. Bu nedenle, nullable değişkenlerle çalışırken dikkatli olmak ve doğru şekilde ele almak önemlidir.
+
+
+
+-------------------
+
+
+
 
