@@ -242,4 +242,24 @@ Ancak, bu tip çıkarımı nullable (null alabilir) türlerle çalışırken dik
 
 
 
+11.Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+
+Evet, null değer almış bir değişken bellekte yer kaplamaz, ancak bu, nullable bir değişkenin bellekte yer kaplamadığı anlamına gelmez. Bellek yönetimi açısından nullable bir değişkenin bir değere sahip olması ile null olması arasında önemli farklar vardır. İşte bu farklar:
+
+    Değer Atanmış Durumda: Nullable bir değişkenin bir değere sahip olması durumunda, bellekte değere ayrılmış bir alan bulunur ve bu alan belirli bir boyutta bir değeri saklar. Bu değer, değişkenin türüne ve atanmış değere göre değişir.
+
+    Null Değeri Durumunda: Null değer alıyorsa, bellekte ayrılmış olan alan artık kullanılmaz ve bu alanın içeriği ihmal edilir. Bu nedenle, null değer almış bir değişkenin bellekte yer kaplamaz.
+
+    Bellek Ayırma ve Serbest Bırakma İşlemi: Nullable bir değişkene bir değer atanması durumunda, bellekte bu değeri saklayacak kadar yer ayrılmalıdır. Ancak, null değer alması durumunda, ayrılmış olan bellek serbest bırakılabilir ve başka bir işlem için kullanılabilir.
+
+    Nullable Değişkenlerin Referans Alanı: Nullable bir değişkenin null olmaması durumunda, bellekte referans alır ve bu referansın bir değeri işaret eder. Ancak, null değer almışsa, bu referans null olarak ayarlanır ve bellekte herhangi bir değeri işaret etmez.
+
+Sonuç olarak, null değer almış bir değişken bellekte yer kaplamaz çünkü bellekteki alanı serbest bırakılır. Ancak, nullable bir değişken bir değere sahip olduğunda, bellekte bu değeri saklamak için yer ayrılır. Bu nedenle, bellek yönetimi açısından bir değere sahip olması ile null olması arasında önemli bir fark vardır.
+
+
+
+-------------------
+
+
 
