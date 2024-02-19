@@ -159,4 +159,22 @@ Tip güvenliği, genellikle şu şekillerde ifade edilir:
 -------------------
 
 
+7.Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+Bir değişkeni nullable yapmak için Kotlin'de ? işaretini kullanabiliriz. Bu işaret, bir değişkenin null olabileceğini belirtir. Örneğin, bir String değişkenini nullable yapmak için String? şeklinde tanımlarız.
+
+İşte bir örnek:
+
+kotlin
+
+var nullableString: String? = null
+
+Bu örnekte, nullableString adında bir String değişkeni nullable olarak tanımlanmıştır ve başlangıçta null olarak atanmıştır.
+
+Bu şekilde nullable yapılan bir değişken, null değeri alabilir veya null olarak atanabilir. Ancak, nullable değişkenlerle çalışırken dikkatli olunmalıdır çünkü bu tür değişkenlerin null olabileceğini göz önünde bulundurarak uygun güvenlik önlemleri alınmalıdır. Bu tür değişkenlerle çalışırken null kontrolü yapılması ve null değerlerin uygun şekilde ele alınması önemlidir.
+
+
+-------------------
+
+
 
