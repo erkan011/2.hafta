@@ -139,4 +139,24 @@ Genel olarak, Kotlin'de tüm değişkenlerin sınıf olarak bulunması, dilin da
 -------------------
 
 
+6."Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+"Tip Güvenliği" (Type Safety), bir programlama dilinin, türler arası uyumluluk ve tip dönüşümleri gibi konularda güvenliği sağlama yeteneğini ifade eder. Bir dilin tip güvenliği olması, belirli tür hatalarını önlemek için tasarlanmış olmasını ve tür uyumsuzluklarının neden olduğu hataları en aza indirgemeyi hedeflemesini ifade eder.
+
+Tip güvenliği, genellikle şu şekillerde ifade edilir:
+
+    Tür Uyumsuzluklarını Önleme: Tip güvenliği, farklı türler arasında geçiş yaparken veya operasyonlar gerçekleştirirken hatalı tür dönüşümlerini önler. Örneğin, bir metin dizesini bir sayıya dönüştürmeye çalışırken oluşabilecek hataların önlenmesi.
+
+    Null Referans Hatalarını Önleme: Tip güvenliği, null değerlerden kaynaklanabilecek hataları önlemek için tasarlanmış bir tür güvenliği özelliği sunabilir. Örneğin, bir dilin null güvenliği özelliği, null değerlerin doğru şekilde işlenmesini sağlayarak null referans hatalarını önler.
+
+    Derleme Zamanı Hata Yakalama: Tip güvenliği, kodun derleme zamanında hatalarını tespit edebilir ve bu hataları çözmeden kodun çalışmasına izin vermez. Bu, tip hatalarının daha erken ve daha kolay tespit edilmesini sağlar.
+
+    Dinamik Tür Kontrolü: Bazı dillerde, çalışma zamanında tür güvenliği sağlanır. Bu, bir değişkenin türünün çalışma zamanında kontrol edilmesi ve uygunsuz tür dönüşümlerinin önlenmesi anlamına gelir.
+
+Özetle, tip güvenliği, bir programlama dilinin türler arasında uyumluluk ve dönüşümler konusunda güvenlik sağlamasını ifade eder. Bu, programların daha güvenilir ve hatasız olmasını sağlar ve geliştiricilere daha iyi bir kod yazma deneyimi sunar.
+
+
+-------------------
+
+
 
