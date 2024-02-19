@@ -713,3 +713,25 @@ Bu örnek, Kotlin'de bit düzeyinde operatörlerin nasıl kullanılacağını g�
 
 
 
+28.Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+
+Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal gibi ek türlerden yararlanılır.
+
+    BigInteger:
+        BigInteger, büyük tamsayıları tutmak için kullanılır. Bu tür, Java'nın java.math.BigInteger sınıfına karşılık gelir. Bu sınıf, istenilen büyüklükte tamsayıları temsil etmek için kullanılır ve sınırlı boyutlardaki temsilcileri aşan büyük tamsayıları destekler. BigInteger sınıfı, işlemler için bir dizi yöntem sağlar.
+        BigInteger'ın sınırları, bellek ve işlem süresi gibi sistem kaynaklarına dayanır. Teorik olarak, sınırsız büyüklükte tamsayılar desteklenir, ancak bellek ve işlem gücü sınırlı olduğundan, uygulamanın çalışma ortamına bağlı olarak gerçek sınırlar olacaktır.
+
+    BigDecimal:
+        BigDecimal, büyük hassasiyetli ondalık sayıları tutmak için kullanılır. Bu tür, Java'nın java.math.BigDecimal sınıfına karşılık gelir. Büyük sayılarla yapılan finansal işlemler veya hassas matematiksel hesaplamalar için idealdir. BigDecimal sınıfı, istenilen hassasiyette ondalık sayıları temsil etmek için kullanılır ve işlem sırasında kayan nokta hatası olasılığını azaltır.
+        BigDecimal'ın sınırları, bellek ve işlem süresi gibi sistem kaynaklarına dayanır. Teorik olarak, sınırsız hassasiyette ondalık sayılar desteklenir, ancak bellek ve işlem gücü sınırlı olduğundan, uygulamanın çalışma ortamına bağlı olarak gerçek sınırlar olacaktır.
+
+Bu türler, işlem sırasında tamsayı veya ondalık sayıların sınırlarını aşan durumlarla başa çıkmak için kullanılır. Ancak, bu türlerin kullanımı bellek ve işlem gücü açısından daha maliyetlidir, bu nedenle sadece ihtiyaç duyulan durumlarda tercih edilmelidir.
+
+
+
+-------------------
+
+
+
+
