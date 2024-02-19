@@ -387,6 +387,42 @@ Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision), on
 Genel olarak, çift duyarlıklı sayılar daha fazla bellek kullanır ve işlemleri biraz daha yavaş yapabilir, ancak daha yüksek hassasiyet sağlarlar. Tek duyarlıklı sayılar ise daha az bellek kullanır ve işlemleri daha hızlı yapabilir, ancak daha sınırlı bir hassasiyete sahiptirler. Bu nedenle, uygulamanın gereksinimlerine ve performans/hassasiyet dengesine bağlı olarak uygun olanı seçilmelidir.
 
 
+
 -------------------
+
+
+
+17.Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+
+Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak nokta işareti (.) kullanılır. Örneğin, 3.14 gibi bir ondalık sayıyı temsil etmek için nokta kullanılır.
+
+Ondalık ayıraçlarla ilgili dikkat edilmesi gereken bazı noktalar şunlardır:
+
+    Kültürel Farklılıklar: Bazı ülkelerde virgül (,) ondalık ayıraç olarak kullanılırken, diğerlerinde nokta (.) kullanılır. Ancak, programlama dillerinde ve uluslararası standartlarda genellikle nokta işareti kullanılır.
+
+    Doğru Biçimlendirme: Ondalık sayılarla çalışırken, değerleri doğru biçimde biçimlendirmek önemlidir. Değerlerin yanlış biçimlendirilmesi veya yanlış yerde nokta veya virgül kullanılması, program hatalarına veya yanlış sonuçlara neden olabilir.
+
+    Java/Kotlin'de Dikkat Edilmesi: Java ve Kotlin gibi dillerde, ondalık sayılarla işlem yaparken nokta kullanılmalıdır. Java'da ve Kotlin'de nokta dışında virgül kullanmak, derleme veya çalışma zamanında hata almanıza neden olabilir.
+
+Örneğin, Java ve Kotlin'de doğru kullanım şu şekildedir:
+
+java
+
+double pi = 3.14;
+float num = 2.5f;
+
+kotlin
+
+val pi: Double = 3.14
+val num: Float = 2.5f
+
+Bu şekilde ondalık sayıları doğru biçimde belirtmek ve uygun şekilde işlem yapmak önemlidir.
+
+
+
+-------------------
+
+
 
 
