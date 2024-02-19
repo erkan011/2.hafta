@@ -425,4 +425,22 @@ Bu şekilde ondalık sayıları doğru biçimde belirtmek ve uygun şekilde işl
 
 
 
+18.Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+
+Double ve Float veri tipleri, ondalık kısmında farklı hassasiyetlere sahiptirler:
+
+    Float (Tek Duyarlıklı): Float veri tipi, ondalık kısımda yaklaşık olarak 7 basamağa kadar hassasiyet sağlar. Ancak, bu değerlerin son basamaklarında hafif sapmalar olabilir. Eğer daha fazla hassasiyet gerektiren durumlar söz konusu değilse veya bellek kullanımını minimize etmek isteniyorsa Float kullanılabilir.
+
+    Double (Çift Duyarlıklı): Double veri tipi, ondalık kısmında yaklaşık olarak 15-16 basamağa kadar hassasiyet sağlar. Bu, Float veri tipine göre daha yüksek bir hassasiyet sağlar ve genellikle daha geniş bir aralıkta değerler saklamak için kullanılır.
+
+Eğer uygulamada daha fazla hassasiyet gerekiyorsa ve bellek kullanımı endişe verici değilse, Double kullanılmalıdır. Bilimsel hesaplamalar, finansal işlemler veya coğrafi veriler gibi alanlarda genellikle Double veri tipi tercih edilir. Ancak, bellek kullanımı önemliyse veya hassasiyet gereksinimi daha düşükse Float kullanılabilir.
+
+Örneğin, maliyet hesaplamaları veya grafik işlemleri gibi durumlarda, genellikle Float yeterli olabilirken, astronomi hesaplamaları veya makine öğrenimi gibi alanlarda Double kullanılması daha uygundur.
+
+
+
+-------------------
+
+
 
