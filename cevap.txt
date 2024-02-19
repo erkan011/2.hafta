@@ -556,4 +556,40 @@ Kotlin, alt çizgileri sayıları daha okunabilir hale getirmek için bir dil ö
 -------------------
 
 
+23.== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+
+== ve === operatörleri, Kotlin'de farklı karşılaştırma işlemlerini gerçekleştirir.
+
+    == Operatörü:
+        == operatörü, iki nesnenin değerlerinin eşit olup olmadığını kontrol eder. Bu operatör, referansların değil, nesnelerin içeriğinin karşılaştırılmasını sağlar. Yani, iki nesne aynı değere sahipse, true değeri döner. Örneğin:
+
+        kotlin
+
+    val a: Int = 5
+    val b: Int = 5
+    println(a == b) // true
+
+    Burada, a ve b değişkenleri aynı değere sahiptir, bu yüzden == operatörü true değerini döndürür.
+
+=== Operatörü:
+
+    === operatörü, iki nesnenin aynı referansa sahip olup olmadığını kontrol eder. Yani, iki nesnenin aynı bellek adresine işaret edip etmediğini kontrol eder. Örneğin:
+
+    kotlin
+
+        val x: Int = 5
+        val y: Int = 5
+        println(x === y) // true
+
+        Burada, x ve y değişkenleri farklı bellek adreslerine sahip olsalar da, değer olarak aynı olduğu için === operatörü true değerini döndürür.
+
+Genel olarak, == operatörü değer karşılaştırması yaparken, === operatörü referans karşılaştırması yapar. Ancak, bazı özel durumlarda (örneğin, nullable türlerde), === operatörü de değer karşılaştırması yapabilir.
+
+
+
+-------------------
+
+
+
 
