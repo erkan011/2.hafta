@@ -113,4 +113,30 @@ Genel olarak, tip çıkarımı, kodun daha temiz ve okunabilir olmasını sağla
 -------------------
 
 
+5.Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir. Kotlin'de, Int, Boolean, Char gibi tüm temel veri türleri, Java'da olduğu gibi ilkel tipler olarak değil, sınıflar olarak uygulanır.
+
+Arka planda, Kotlin derleyicisi ilkel veri türlerini sınıf türlerine otomatik olarak dönüştürür. Örneğin, Int bir sınıf türüdür ve bir nesne gibi davranır. Bu nesneler JVM (Java Sanal Makinesi) tarafından yönetilir ve işlenir.
+
+Bu yaklaşımın bazı avantajları vardır:
+
+    Tür Uyumu: Tüm değişkenlerin sınıf olarak ele alınması, tür uyumsuzluklarını önler ve daha tutarlı bir dil tasarımı sağlar.
+
+    Özellik Zenginliği: Sınıf olarak uygulanan temel veri türleri, ilkel tiplerin özelliklerini genişletebilir. Örneğin, Int sınıfı üzerinde ek fonksiyonlar ve özellikler tanımlanabilir.
+
+    Null Güvenliği: Kotlin'de tüm değişkenler varsayılan olarak null olamazlar. Bu, null değerlerden kaynaklanabilecek hataları önler ve kodun daha güvenli hale gelmesini sağlar.
+
+Ancak, bu yaklaşımın bazı dezavantajları da vardır:
+
+    Performans: İlkel veri türleri JVM tarafından daha verimli bir şekilde işlenirken, sınıf türleri daha fazla bellek kullanabilir ve daha yavaş çalışabilir. Ancak, Kotlin derleyicisi genellikle bu performans farklılıklarını en aza indirmeye çalışır.
+
+    Karmaşıklık: Sınıf olarak uygulanan temel veri türleri, kodun daha karmaşık hale gelmesine ve yazma süresinin uzamasına neden olabilir. İlkel veri türleri daha basit ve doğrudan olabilir.
+
+Genel olarak, Kotlin'de tüm değişkenlerin sınıf olarak bulunması, dilin daha tutarlı olmasını sağlar ve daha fazla özellik sunar. Bununla birlikte, bazı durumlarda ilkel veri türleri daha uygun olabilir, özellikle performans veya kodun karmaşıklığı göz önünde bulundurularak.
+
+
+-------------------
+
+
 
