@@ -592,4 +592,21 @@ Genel olarak, == operatörü değer karşılaştırması yaparken, === operatör
 
 
 
+24.=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+
+Kotlin'de === operatörü, referans karşılaştırması yapar ve iki nesnenin bellek adreslerinin aynı olup olmadığını kontrol eder. Bu nedenle, iki Byte değişkeni için === operatörü kullanıldığında, bellek adreslerinin aynı olup olmadığına bakılır.
+
+Ancak, Byte veri türü -128 ile 127 arasındaki değerler için özel bir davranışa sahiptir. Bu aralığın dışındaki değerler için, her bir Byte değeri ayrı bir bellek alanında saklanır. Bunun sebebi, JVM'in bellek tasarrufu yapmak için küçük değerlere sahip Byte türlerini sıklıkla kullanılacak şekilde optimize etmesidir. Bu aralık içindeki değerler, bellekte bir önbellek oluşturulur ve aynı değere sahip olan Byte değişkenleri aynı bellek adresini paylaşır. Bu durum, === operatörünün beklenen sonucunu sağlar, yani aynı değere sahip Byte değişkenleri için true değeri döndürür.
+
+Ancak, -128 ile 127 aralığı dışındaki değerler için, her bir değer ayrı bir bellek adresinde saklanır. Bu durumda, iki Byte değişkeninin aynı değere sahip olmasına rağmen, bellek adresleri farklı olacağından === operatörü false döndürecektir.
+
+Bu özel davranış, bellek kullanımını optimize etmek ve performansı artırmak için yapılan bir optimizasyondur. Bu nedenle, Kotlin'de === operatörünü Byte değişkenleri için kullanırken, bu özel davranışın bilinmesi önemlidir.
+
+
+
+-------------------
+
+
+
 
