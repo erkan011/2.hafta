@@ -480,4 +480,28 @@ Bu örneklerde, her sayı sistemi için uygun biçimlendirme kullanılarak deği
 
 
 
+20.Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+
+Sekizlik (Octal) sayılar, sekiz rakam (0-7) kullanılarak temsil edilirler. Java'da, sekizlik sayılar varsayılan olarak ondalık olarak tanımlanır, ancak bir ön ek ekleyerek sekizlik sayıları belirtilebilir. Kotlin'de ise sekizlik sayılar doğrudan desteklenmez, ancak bazı dönüşümler aracılığıyla kullanılabilirler.
+
+Java'da sekizlik sayı tanımlamak için ön ek olarak "0" kullanılır:
+
+java
+
+int octalNumber = 0123; // Bu bir sekizlik sayıdır (örneğin, 83 ondalık olarak temsil edilir)
+
+Kotlin'de ise doğrudan sekizlik sayıları belirtilemez. Ancak, Java'dan Kotlin'e dönüşümlerde veya Kotlin'deki String formatlarından birini kullanarak elde edilen sekizlik sayılar Kotlin'de kullanılabilir. Örneğin:
+
+kotlin
+
+val octalNumber = Integer.parseInt("123", 8) // Sekizlik sayı 123, 10'luk tabanda 83'e karşılık gelir
+
+Kotlin'de parseInt() fonksiyonunun ikinci parametresi tabanı belirtir. "123" dizesi sekizlik olarak yorumlanır ve 10'luk tabana dönüştürülür. Bu nedenle, sekizlik sayıları doğrudan tanımlanamaz, ancak dönüşümler aracılığıyla kullanılabilirler.
+
+
+
+-------------------
+
+
 
