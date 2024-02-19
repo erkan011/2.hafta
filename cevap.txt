@@ -734,4 +734,29 @@ Bu türler, işlem sırasında tamsayı veya ondalık sayıların sınırların�
 
 
 
+29.Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+
+Double ve Float değişkenlerinde varsayılan olarak yuvarlama davranışı, IEEE 754 standardına göre belirlenir. Bu standart, kayan nokta sayılarının temsili ve işlenmesi için yaygın olarak kullanılır. Yuvarlama, sayıyı en yakın tam sayıya veya belirli bir ondalık basamağa yuvarlamayı içerir.
+
+Varsayılan olarak, Kotlin ve diğer birçok programlama dilinde, çoğu durumda, sayılar normal aritmetik kurallarına göre yuvarlanır. Ancak, bazı özel durumlar ve işlem sonuçları, IEEE 754 standardına uygun olarak yuvarlanabilir.
+
+Sayıları belirli bir ondalık basamağa yuvarlama işlemi, Java'da BigDecimal sınıfı veya özel yuvarlama algoritmaları kullanılarak gerçekleştirilebilir. Örneğin, BigDecimal sınıfının setScale() yöntemi, belirli bir hassasiyete göre yuvarlama yapabilir.
+
+kotlin
+
+val number: Double = 3.14159
+val roundedNumber = BigDecimal(number).setScale(2, RoundingMode.HALF_EVEN)
+println(roundedNumber) // 3.14
+
+Bu örnek, 3.14159 sayısını iki ondalık basamağa yuvarlar. RoundingMode.HALF_EVEN yuvarlama modunu kullanır, yani 5'in altındaki ondalık kısmı aşağıya yuvarlanırken, 5 ve üzeri üst sayıya yuvarlanır. Yuvarlama davranışını değiştirmek için farklı yuvarlama modları kullanılabilir.
+
+Ancak, belirli bir yuvarlama davranışının yerleşik olarak değiştirilmesi, genellikle dilin veya kütüphanenin kendisine özgü özelliklerine bağlıdır ve genellikle standart aritmetik kurallarına uygun olarak yuvarlama yapılır. Özel yuvarlama gereksinimleri varsa, özel yuvarlama işlevlerinin veya sınıflarının kullanılması gerekebilir.
+
+
+
+-------------------
+
+
+
 
