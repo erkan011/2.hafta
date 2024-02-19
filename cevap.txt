@@ -320,4 +320,39 @@ Bu alt sınıflar, farklı sayı tiplerini temsil eder ve her biri belirli bir d
 -------------------
 
 
+14.Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+
+Kotlin, tip çıkarımını (type inference) kullanarak değişkenlere otomatik olarak uygun türleri atama yeteneğine sahiptir. Eğer bir değişkenin tipi belirtilmemişse ve bir değer atandığında, Kotlin bu değerin türüne bakarak değişkenin türünü belirler.
+
+Örneğin:
+
+kotlin
+
+val number = 42 // Değer olarak bir tamsayı atanmış
+
+Burada number değişkeninin türü belirtilmemiş ancak 42 bir tamsayıdır. Kotlin, bu durumda number değişkenine Int türünü atayacaktır.
+
+Bir örnekle daha açıklayalım:
+
+kotlin
+
+val pi = 3.14 // Değer olarak bir ondalıklı sayı atanmış
+
+Burada da pi değişkeninin türü belirtilmemiş ancak 3.14 bir ondalıklı sayıdır. Kotlin, bu durumda pi değişkenine Double türünü atayacaktır, çünkü varsayılan olarak ondalıklı sayılar için Double kullanılır.
+
+Kotlin, bu tip çıkarımını derleme zamanında gerçekleştirir ve değişkenin başlangıç değerine bakarak uygun türü belirler. Bu, kodun daha temiz ve okunabilir olmasını sağlar, çünkü gerekli olan türleri açıkça belirtmek zorunda kalmazsınız. Ancak, gerektiğinde türü açıkça belirtmek istiyorsanız, tip belirtimi yapabilirsiniz:
+
+kotlin
+
+val number: Int = 42
+val pi: Double = 3.14
+
+Ancak, genellikle Kotlin'de tip çıkarımına güvenmek tercih edilen bir yöntemdir, çünkü bu kodu daha esnek hale getirir ve kod tekrarını azaltır.
+
+
+
+-------------------
+
+
 
