@@ -1,0 +1,46 @@
+1.val ile var arasındaki fark nedir?
+
+
+val ve var Kotlin programlama dilinde değişken tanımlamak için kullanılan anahtar kelimelerdir ve aralarında önemli bir fark vardır:
+
+    val: val bir değişkenin değerinin bir kez atanacağını ve daha sonra değiştirilemeyeceğini belirtir. Yani, bir kez bir değer atandıktan sonra, o değer değiştirilemez ve sabit olarak kalır. val ile tanımlanan değişkenler, Kotlin'in "değiştirilemez" (immutable) değişkenleri olarak bilinir. Örnek:
+
+kotlin
+
+val pi = 3.14
+
+var: var ise değişkenin değerinin atanmasının ardından daha sonra değiştirilebileceğini belirtir. Yani, bir değişkenin değeri zamanla değişebilir. var ile tanımlanan değişkenler, Kotlin'in "değiştirilebilir" (mutable) değişkenleridir. Örnek:
+
+kotlin
+
+    var yas = 25
+    yas = 26 // Değer değiştirilebilir
+
+Özetle, val ile tanımlanan değişkenler bir kez atandıktan sonra değiştirilemezken, var ile tanımlanan değişkenler değerleri daha sonra değiştirilebilir. Bu fark, Kotlin'de kodun güvenliğini ve anlaşılabilirliğini artırır çünkü kodunuzda değişkenlerin nasıl kullanılacağını daha net bir şekilde ifade edebilirsiniz. Bu nedenle, değişkenlerinizin ne zaman ve nerede değiştirileceğini düşünerek val ve var anahtar kelimelerini seçmelisiniz.
+
+
+-------------------
+
+
+2.Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+
+Bir var değişkenini val gibi davranmasını sağlamak için, değişkenin bir kez atanmasının ardından tekrar değer atanamayacak şekilde davranmasını sağlamamız gerekir. Bu, değişkenin referansını değiştirmek yerine içerdiği nesneyi değiştiremeyeceğimiz anlamına gelir. Bunu yapmanın birkaç yolu vardır, örneğin:
+
+    Kotlin'un Standart Kütüphanesini Kullanma: Kotlin'un standart kütüphanesinde yer alan immutableListOf, immutableSetOf, ve immutableMapOf gibi işlevlerle, değişkenin içeriğini değiştiremeyeceğiniz bir koleksiyon elde edebilirsiniz.
+
+    Örnek:
+
+var immutableList = listOf(1, 2, 3).toList()
+// Artık immutableList değişkeninin içeriği değiştirilemez
+
+
+Değişken Türünü İlkel bir Türden Nesne Türüne Dönüştürme: Bir değişkeni var olarak tanımlamak yerine, içeriğini değiştiremeyeceğiniz bir nesne türüne dönüştürebilirsiniz. Örneğin, ArrayList yerine List kullanabilirsiniz.
+
+Örnek:
+
+var immutableList: List<Int> = ArrayList<Int>()
+
+Bu tür yaklaşımları kullanmanın nedeni, belirli bir durumda değişkenin değerinin bir kez atanmasını ve daha sonra değiştirilmemesini istiyor olabiliriz. Örneğin:
+
+Senaryo: Bir kullanıcının sisteme kaydolmasını ve bir kez kullanıcı adını belirlemesini sağlayan bir uygulama yazıyorsunuz. Kullanıcı adı bir kez belirlendikten sonra, kullanıcının kendi kullanıcı adını değiştirmesine izin vermek istemiyorsunuz. Bu durumda, kullanıcı adını içeren değişkenin bir kez atanmasını ve daha sonra değiştirilememesini sağlamak isteyebilirsiniz. Bu durumda, var değişkenini val gibi davranacak şekilde yapılandırabilirsiniz. Bu sayede, kullanıcı adı bir kez atanır ve daha sonra değiştirilemez. Bu tür durumlarda, kullanıcıların beklenmedik davranışlara yol açmasını önlemek ve kodun daha güvenli hale gelmesini sağlamak için değişkenlerin davranışını sınırlamak yararlı olabilir.
