@@ -200,4 +200,25 @@ Null güvenliği, kodun daha güvenilir ve hatasız olmasını sağlar. Null ref
 -------------------
 
 
+9.Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+
+Kotlin'de bir değişkene null değer atanırken ve tip belirtilmezse, bu durumda Kotlin derleyicisi bu değişkeni otomatik olarak nullable (null alabilir) olarak yorumlar. Yani, o değişken null olabilir.
+
+Örneğin:
+
+kotlin
+
+val nullableString = null
+
+Bu durumda, nullableString değişkeni otomatik olarak nullable bir String? olarak yorumlanır. String? tipi, null değer alabilen bir String türüdür.
+
+Bu, Kotlin'in tip çıkarımı (type inference) özelliğinin bir sonucudur. Kotlin'de, bir değişkenin tipini açıkça belirtmek zorunda kalmadan da değişkenin türünü çıkarmak mümkündür. Bu, kodun daha temiz ve okunabilir olmasını sağlar.
+
+Ancak, bu tip çıkarımı nullable (null alabilir) türlerle çalışırken dikkatli olmayı gerektirir. Nullable türlerle çalışırken, null kontrolü yapılması ve null değerlerin uygun şekilde ele alınması önemlidir. Aksi takdirde, null referans hataları oluşabilir.
+
+
+-------------------
+
+
 
