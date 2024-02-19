@@ -504,4 +504,34 @@ Kotlin'de parseInt() fonksiyonunun ikinci parametresi tabanı belirtir. "123" di
 -------------------
 
 
+21."Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+
+Kotlin'de, matematiksel ifadeleri geleneksel notasyonla ifade etme anlamında özel bir söz dizimi veya semantik yoktur. Ancak, Kotlin'de matematiksel ifadeleri ve operasyonları gerçekleştirmek için operatörler ve ifadeler kullanılır.
+
+Örneğin, bir matematiksel ifadeyi Kotlin'de şu şekilde ifade edebilirsiniz:
+
+kotlin
+
+val result = (3 + 5) * 2
+
+Bu ifade, (3 + 5) ifadesinin sonucunu 2 ile çarpmak için geleneksel matematiksel sembolleri kullanmaz, ancak semantik olarak aynı işlemi gerçekleştirir. Kotlin'de, parantez içindeki işlemler öncelikli olarak değerlendirilir ve ardından çarpma işlemi yapılır.
+
+Daha karmaşık ifadeleri de benzer şekilde ifade edebilirsiniz. Örneğin:
+
+kotlin
+
+val x = 5
+val y = (x * x + 2 * x + 1) / (x + 1)
+
+Bu ifade, x2+2x+1x2+2x+1 teriminin x+1x+1 ile bölünmesini ifade eder. Burada da geleneksel semboller kullanılmaz, ancak matematiksel ifadenin anlamı ve işlevselliği aynıdır.
+
+Kotlin'de matematiksel ifadeleri yazarken geleneksel semboller yerine daha okunabilir ve anlaşılabilir kodlama pratikleri kullanmak önemlidir. Bu şekilde, kodunuzun anlaşılabilirliği ve bakımı artar.
+
+
+
+-------------------
+
+
+
 
