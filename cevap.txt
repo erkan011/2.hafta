@@ -177,4 +177,27 @@ Bu şekilde nullable yapılan bir değişken, null değeri alabilir veya null ol
 -------------------
 
 
+8."Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+
+"Null Güvenliği" (Null Safety), bir programlama dilinin veya bir programın, null değerlerden kaynaklanabilecek hataları önlemek için tasarlanmış özelliklerine ve tekniklerine sahip olmasıdır. Null güvenliği, programcıların null referans hatalarını önlemelerine ve kodlarını daha güvenli hale getirmelerine yardımcı olur.
+
+Null güvenliği, genellikle aşağıdaki unsurları içerir:
+
+    Nullable Türler: Null güvenliği, değişkenlerin nullable (null değer alabilir) veya non-nullable (null alamaz) olabilmesini sağlar. Nullable türler, bir değişkenin null olabileceğini belirtirken, non-nullable türler null olamayacağını belirtir.
+
+    Null Kontrolü Operatörleri: Null güvenliği, null değerlerin kontrol edilmesini ve işlenmesini kolaylaştıran özel operatörler sağlar. Örneğin, Elvis operatörü (?:), null koalesans operatörü (?.), null check operatörü (!!) gibi operatörler null güvenliği sağlamak için kullanılır.
+
+    Derleme Zamanı Hata Yakalama: Null güvenliği, kodun derleme zamanında null referans hatalarını tespit edebilir ve bu hataları önleyebilir. Bu, null değerlerin uygun şekilde ele alınmasını ve null referans hatalarının önlenmesini sağlar.
+
+    Null Anotasyonları ve İzinler: Bazı dillerde null güvenliği, null anotasyonları ve izinler gibi özellikleri içerir. Bu özellikler, belirli değişkenlerin null değer alıp alamayacaklarını açıkça belirtir.
+
+    Fonksiyonel Programlama Yaklaşımları: Bazı fonksiyonel programlama dillerinde, null güvenliği daha doğal bir şekilde sağlanır. Örneğin, Java'da Optional gibi özellikler, null referans hatalarını önlemek için kullanılabilir.
+
+Null güvenliği, kodun daha güvenilir ve hatasız olmasını sağlar. Null referans hataları, bir programın en yaygın hatalarından biridir ve null güvenliği bu tür hataların önlenmesine yardımcı olur. Bu nedenle, null güvenliği, modern programlama dillerinin ve teknolojilerinin önemli bir özelliğidir ve programcılar için önemli bir tasarım prensibidir.
+
+
+-------------------
+
+
 
