@@ -44,3 +44,38 @@ var immutableList: List<Int> = ArrayList<Int>()
 Bu tür yaklaşımları kullanmanın nedeni, belirli bir durumda değişkenin değerinin bir kez atanmasını ve daha sonra değiştirilmemesini istiyor olabiliriz. Örneğin:
 
 Senaryo: Bir kullanıcının sisteme kaydolmasını ve bir kez kullanıcı adını belirlemesini sağlayan bir uygulama yazıyorsunuz. Kullanıcı adı bir kez belirlendikten sonra, kullanıcının kendi kullanıcı adını değiştirmesine izin vermek istemiyorsunuz. Bu durumda, kullanıcı adını içeren değişkenin bir kez atanmasını ve daha sonra değiştirilememesini sağlamak isteyebilirsiniz. Bu durumda, var değişkenini val gibi davranacak şekilde yapılandırabilirsiniz. Bu sayede, kullanıcı adı bir kez atanır ve daha sonra değiştirilemez. Bu tür durumlarda, kullanıcıların beklenmedik davranışlara yol açmasını önlemek ve kodun daha güvenli hale gelmesini sağlamak için değişkenlerin davranışını sınırlamak yararlı olabilir.
+
+
+-------------------
+
+
+3."Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+
+"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramları genellikle aynı şeyi ifade etmezler. İkisi arasındaki fark şudur:
+
+    Değişmez (Immutable): Bir nesnenin oluşturulduktan sonra içeriğinin değiştirilemez olduğu durumu ifade eder. Yani, bir kez bir değişkene değer atandıktan sonra, bu değer değiştirilemez. Değişmez nesneler genellikle yeni bir nesne oluşturarak değiştirme işlemi yaparlar.
+
+    Salt Okunur (ReadOnly): Bir nesneye sadece okuma işlemi yapılabilir, yani içeriği sadece okunabilir. Ancak, bu nesne hala başka bir değerle değiştirilebilir olabilir.
+
+Kotlin'de val anahtar kelimesi ile tanımlanan değişkenler aslında değişmez (immutable) değil, salt okunur (readOnly) olarak tanımlanabilir. Bunun nedeni şudur:
+
+Bir val değişkeni oluşturulduktan sonra içeriği değiştirilemez, yani değişkenin kendisi bir kez atandıktan sonra başka bir değerle değiştirilemez. Ancak, bu değişkenin içeriği (referansı) değiştirilebilir bir nesneye yönlendirilebilir. Örneğin:
+
+kotlin
+
+val list = mutableListOf(1, 2, 3)
+list.add(4) // Bu geçerlidir, çünkü listenin içeriği değiştirilebilir
+
+val immutableList = listOf(1, 2, 3)
+// immutableList.add(4) // Bu satır hata verecektir, çünkü liste değişmez
+
+İlk örnekte, list değişkeni val olarak tanımlanmış olsa da, mutableListOf fonksiyonu ile oluşturulan değiştirilebilir bir liste atandığından, listenin içeriği değiştirilebilir. Ancak, ikinci örnekte immutableList değişkeni listOf fonksiyonu ile oluşturulan bir değişmez liste atandığından, listenin içeriği değiştirilemez.
+
+Bu nedenle, Kotlin'de val değişkenlerin "değişmez" değil, "salt okunur" (readOnly) olarak açıklanması daha doğru olacaktır, çünkü değişkenin kendisi bir kez atandıktan sonra değiştirilemez ancak içerdiği nesnenin içeriği değişebilir.
+
+
+-------------------
+
+
+
