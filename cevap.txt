@@ -444,3 +444,40 @@ Eğer uygulamada daha fazla hassasiyet gerekiyorsa ve bellek kullanımı endişe
 
 
 
+19.Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+
+Kotlin'de ondalık (Decimal), onaltılık (Hexadecimal) ve ikili (Binary) sayıları temsil etmek için farklı biçimlendirme seçenekleri bulunmaktadır. İşte bu sayı sistemlerine göre değişken tanımlama örnekleri:
+
+    Ondalık (Decimal) Sayılar:
+        Ondalık sayılar, genellikle varsayılan sayı sistemi olarak kullanılır ve Kotlin'de doğrudan kullanılabilirler. Örneğin:
+
+        kotlin
+
+    val decimalNumber: Int = 42
+
+Onaltılık (Hexadecimal) Sayılar:
+
+    Onaltılık sayılar, başına "0x" eklenerek tanımlanır ve rakamlar 0-9 arası ve A-F (veya a-f) arasındaki harflerle temsil edilir. Örneğin:
+
+    kotlin
+
+    val hexadecimalNumber: Int = 0xABCD
+
+İkilik (Binary) Sayılar:
+
+    İkilik sayılar, başına "0b" eklenerek tanımlanır ve sadece 0 ve 1 rakamlarıyla temsil edilir. Örneğin:
+
+    kotlin
+
+        val binaryNumber: Int = 0b1010
+
+Bu örneklerde, her sayı sistemi için uygun biçimlendirme kullanılarak değişkenler tanımlanmıştır. Ondalık sayılar için ek bir ön ek gerekmezken, onaltılık ve ikili sayılar için sırasıyla "0x" ve "0b" ön ekleri kullanılır. Bu şekilde, farklı sayı sistemlerinde sayıları temsil etmek ve kullanmak mümkündür.
+
+
+
+-------------------
+
+
+
+
