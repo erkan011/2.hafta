@@ -355,4 +355,20 @@ Ancak, genellikle Kotlin'de tip çıkarımına güvenmek tercih edilen bir yönt
 -------------------
 
 
+15.Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 
+
+
+Kotlin'de "Float" ve "Long" gibi belirli veri tiplerini tanımlarken, farklı tanımlama kuralları ve sözdizimi kullanılır. İşte bu farklılıkların nedenleri:
+
+    Float Değişkenlerinde F/f Harfi:
+        Ondalıklı sayılarınızı ifade ederken, Kotlin'de "Float" veri tipini kullanırken, değer sonuna F veya f ekleyerek bir ondalıklı sayının float türü olduğunu belirtebilirsiniz. Örneğin: val number: Float = 3.14f veya val number = 3.14f.
+
+    Long Değişkenlerinde Küçük l Harfi:
+        Long türünde sayıları ifade ederken, Kotlin'de küçük "l" harfi kullanılmaz. Bunun yerine sayıyı doğrudan belirtirken, Kotlin, sayıyı varsayılan olarak "Int" türünde algılar. Ancak eğer sayının sonuna "L" veya "l" harfi eklerseniz, bu sayının "Long" türünde olduğunu belirtmiş olursunuz. Örneğin: val number: Long = 100L veya val number = 100L.
+
+Bu farklılıklar, Kotlin'in dil tasarımı ve sözdizimine dayanmaktadır. Ondalıklı sayılarla "Float" türünü belirtirken, tür belirteci olarak F veya f kullanılırken, tamsayılarla "Long" türünü belirtirken, tür belirteci olarak L veya l kullanılmaktadır. Bu, Kotlin'in tutarlı ve okunabilir kod yazmayı teşvik eden bir yaklaşımı yansıtır.
+
+
+
+-------------------
