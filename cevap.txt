@@ -644,4 +644,37 @@ Bu operatörlerin yanı sıra, karşılaştırma operatörleri (örneğin, <, >,
 
 
 
+26.Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+
+Sayısal değişkenlerde aşağıdaki karşılaştırma operatörleri kullanılabilir:
+
+    Eşitlik (==): İki değer eşitse true, değilse false döner.
+    Eşit Değil (!=): İki değer eşit değilse true, değilse false döner.
+    Büyüktür (>): Sol taraftaki değer sağ taraftaki değerden büyükse true, değilse false döner.
+    Küçüktür (<): Sol taraftaki değer sağ taraftaki değerden küçükse true, değilse false döner.
+    Büyük Eşittir (>=): Sol taraftaki değer sağ taraftaki değerden büyük veya eşitse true, değilse false döner.
+    Küçük Eşittir (<=): Sol taraftaki değer sağ taraftaki değerden küçük veya eşitse true, değilse false döner.
+
+Bu operatörler, sayısal değerlerin karşılaştırılması için kullanılır ve true veya false değeri döndürürler. Örneğin:
+
+kotlin
+
+val x = 10
+val y = 5
+
+val esitMi = x == y     // false
+val esitDegilMi = x != y // true
+val buyukMu = x > y      // true
+val kucukMu = x < y      // false
+val buyukEsitMi = x >= y // true
+val kucukEsitMi = x <= y // false
+
+Bu operatörler, program akışını kontrol etmek, koşullu ifadeler oluşturmak veya değerlerin ilişkisini belirlemek için kullanılır.
+
+
+
+-------------------
+
+
 
