@@ -78,4 +78,39 @@ Bu nedenle, Kotlin'de val değişkenlerin "değişmez" değil, "salt okunur" (re
 -------------------
 
 
+4."Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+
+Tip çıkarımı (Type inference), bir programlama dilinde bir değişkenin veya ifadenin türünün açıkça belirtilmemesi durumunda derleyicinin veya yorumlayıcının bu türü otomatik olarak çıkarmasıdır. Yani, programcının bir değişkenin türünü belirtmesine gerek kalmadan, derleyici veya yorumlayıcı bu türü çıkartabilir.
+
+Örneğin, Kotlin'de:
+
+kotlin
+
+val sayi = 42
+
+Burada sayi değişkeninin türü belirtilmemiştir, ancak derleyici otomatik olarak Int olduğunu çıkarır.
+
+Tip çıkarımının avantajları şunlardır:
+
+    Kodun daha temiz ve okunabilir olmasını sağlar, çünkü tip belirtimi gerektirmez.
+    Yazılım geliştiricilerin kod yazma süresini kısaltır, çünkü tip belirtmek zorunda kalmazlar.
+    Daha esnek kod yazımına izin verir, çünkü değişken türlerinin değişikliklerine daha az bağlıdır.
+
+Ancak, bazı durumlarda tür belirtmek kesin olarak gereklidir:
+
+    Belirsizlik Durumları: Tip çıkarımı belirsizlik durumlarında (örneğin, birden fazla tür kullanıldığında) hatalı sonuçlara yol açabilir. Bu durumlarda, türü açıkça belirtmek daha doğru olabilir.
+
+    Genel Kavramları Açıklamak: Değişkenin türünü belirtmek, kodun daha anlaşılır olmasını sağlayabilir, özellikle genel kavramları açıklamak veya belirli bir tür kullanımını belirtmek istediğinizde.
+
+    Java ile Entegrasyon: Kotlin'de Java kodu ile etkileşimde bulunurken, bazı durumlarda tür belirtimi gerekebilir, özellikle de Kotlin'in tip çıkarımı ve Java'nın farklı tür sistemi arasında uyumsuzluk olduğunda.
+
+    API Kullanımı: Bazı durumlarda, belirli bir API'nin beklediği türleri açıkça belirtmek önemlidir, böylece doğru türleri kullanarak hata almadan kod yazabilirsiniz.
+
+Genel olarak, tip çıkarımı, kodun daha temiz ve okunabilir olmasını sağlar, ancak bazı durumlarda tür belirtmek kesin olarak gereklidir, özellikle belirsizlik durumları veya spesifik gereksinimler söz konusu olduğunda.
+
+
+-------------------
+
+
 
