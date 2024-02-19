@@ -609,4 +609,39 @@ Bu özel davranış, bellek kullanımını optimize etmek ve performansı artır
 
 
 
+25.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+
+Sayısal değişkenlerde, aşağıdaki matematiksel operatörler kullanılabilir:
+
+    Toplama (+): İki değeri toplar.
+    Çıkarma (-): İki değeri çıkarır.
+    Çarpma (*): İki değeri çarpar.
+    Bölme (/): Bir değeri diğerine böler.
+    Mod (%): Bir sayının diğerine bölümünden kalanı verir.
+    Artırma (++) ve Azaltma (--): Bir değeri bir artırır veya azaltır.
+
+Bu operatörler, sayısal veri tipleri olan int, long, float, double gibi tüm sayısal değişkenlerde kullanılabilir. Bunlar, temel matematiksel işlemleri gerçekleştirmek için kullanılan standart operatörlerdir. Örneğin:
+
+kotlin
+
+val x = 10
+val y = 5
+
+val toplam = x + y // 15
+val fark = x - y   // 5
+val carpim = x * y // 50
+val bolum = x / y  // 2
+val kalan = x % y  // 0
+val arttir = x++   // x şimdi 11
+val azalt = y--    // y şimdi 4
+
+Bu operatörlerin yanı sıra, karşılaştırma operatörleri (örneğin, <, >, <=, >=) ve atama operatörleri (örneğin, +=, -=, *=, /=) gibi diğer operatörler de sayısal değişkenlerde kullanılabilir.
+
+
+
+-------------------
+
+
+
 
