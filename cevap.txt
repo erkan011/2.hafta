@@ -372,3 +372,21 @@ Bu farklılıklar, Kotlin'in dil tasarımı ve sözdizimine dayanmaktadır. Onda
 
 
 -------------------
+
+
+16.Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision), ondalıklı sayıların bilgisayar belleğinde ve hesaplama işlemlerinde temsil edilme biçimlerini ifade eder. Bu terimler genellikle kayan nokta (floating point) sayılar için kullanılır.
+
+    Tek Duyarlıklı (Single Precision):
+        Tek duyarlıklı, ondalıklı sayıları temsil etmek için daha az bellek kullanır. Bir tek duyarlıklı sayı, 32 bitlik bir bellek alanında depolanır ve IEEE 754 standartlarına göre tanımlanır. Tek duyarlıklı format, 1 bitlik işaret, 8 bitlik üs ve 23 bitlik kesirli kısmı içerir. Bu format, daha az bellek kullanımı sağladığı için bazı uygulamalarda tercih edilir. Ancak, daha sınırlı bir hassasiyete sahiptir ve daha büyük sayılar veya daha hassas hesaplamalar gerektiren durumlar için yeterli olmayabilir.
+
+    Çift Duyarlıklı (Double Precision):
+        Çift duyarlıklı, ondalıklı sayıları temsil etmek için daha fazla bellek kullanır. Bir çift duyarlıklı sayı, 64 bitlik bir bellek alanında depolanır ve yine IEEE 754 standartlarına göre tanımlanır. Çift duyarlıklı format, 1 bitlik işaret, 11 bitlik üs ve 52 bitlik kesirli kısmı içerir. Bu format, daha büyük bir aralıkta ve daha yüksek bir hassasiyette sayıları temsil etmek için kullanılır. Bu nedenle, bilimsel hesaplamalar, mühendislik uygulamaları ve finansal işlemler gibi alanlarda daha yaygın olarak kullanılır.
+
+Genel olarak, çift duyarlıklı sayılar daha fazla bellek kullanır ve işlemleri biraz daha yavaş yapabilir, ancak daha yüksek hassasiyet sağlarlar. Tek duyarlıklı sayılar ise daha az bellek kullanır ve işlemleri daha hızlı yapabilir, ancak daha sınırlı bir hassasiyete sahiptirler. Bu nedenle, uygulamanın gereksinimlerine ve performans/hassasiyet dengesine bağlı olarak uygun olanı seçilmelidir.
+
+
+-------------------
+
+
