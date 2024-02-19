@@ -677,4 +677,39 @@ Bu operatörler, program akışını kontrol etmek, koşullu ifadeler oluşturma
 -------------------
 
 
+27.Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+
+Bit düzeyinde operatörler, sayıların ikili (binary) formundaki bit seviyesinde işlemleri gerçekleştirmek için kullanılır. Bu operatörler, veri işleme ve manipülasyonunda, düşük seviyeli programlamada, veri sıkıştırma ve şifreleme gibi alanlarda kullanışlıdır. Temel bit düzeyinde operatörler şunlardır:
+
+    AND (&): İki bit de 1 ise sonuç 1 olur, diğer durumlarda 0 olur.
+    OR (|): En az bir bit 1 ise sonuç 1 olur, diğer durumlarda 0 olur.
+    XOR (^): İki bit farklıysa sonuç 1 olur, aynıysa 0 olur.
+    NOT (~): Bir biti tersine çevirir; 0 ise 1 yapar, 1 ise 0 yapar.
+    Shift Left (<<): Belirtilen sayıda biti sola kaydırır.
+    Shift Right (>>): Belirtilen sayıda biti sağa kaydırır.
+
+Bu operatörler, özellikle donanım kontrolü, bit bazlı veri yapıları ve düşük seviyeli kodlama gibi alanlarda kullanılır.
+
+Kotlin'de bu operatörlerin kullanımı Java ile aynıdır. Örneğin:
+
+kotlin
+
+val a = 0b1010 // 10
+val b = 0b1100 // 12
+
+val andResult = a and b    // 8 (0b1000)
+val orResult = a or b      // 14 (0b1110)
+val xorResult = a xor b    // 6 (0b0110)
+val notResultA = a.inv()   // -11 (0b11111111111111111111111111110101)
+val leftShiftResult = a shl 2 // 40 (0b101000)
+val rightShiftResult = b shr 2 // 3 (0b11)
+
+Bu örnek, Kotlin'de bit düzeyinde operatörlerin nasıl kullanılacağını göstermektedir. Bu operatörler, sayıları ikili formdaki bitlerine göre işleyerek sonuç üretirler.
+
+
+
+-------------------
+
+
 
