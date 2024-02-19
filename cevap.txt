@@ -534,4 +534,26 @@ Kotlin'de matematiksel ifadeleri yazarken geleneksel semboller yerine daha okuna
 
 
 
+22.Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+
+Kotlin'de alt çizgi (underscore) kullanımı, sayısal değerlerin okunabilirliğini artırmak için kullanılır. Bu, özellikle büyük sayılar veya binlerce, milyonlarca gibi büyük değerlerin okunmasını kolaylaştırmak için yararlıdır.
+
+Alt çizgi, sayısal değerlerin içinde kullanılabilir ancak başlangıçta veya sonunda olmamalıdır. Ayrıca, birden fazla alt çizgi bir araya gelmemelidir.
+
+Örneğin, milyonlarca bir sayıyı okunabilir hale getirmek için alt çizgi kullanabilirsiniz:
+
+kotlin
+
+val million = 1_000_000
+
+Bu şekilde, 1,000,000 sayısını temsil eden bir değişken oluşturulur. Alt çizgiler, sayıyı 1 milyon olarak tanımlamakta kullanılır ancak kod derlendiğinde alt çizgiler atılır ve sayı normal şekilde işlenir.
+
+Kotlin, alt çizgileri sayıları daha okunabilir hale getirmek için bir dil özelliği olarak algılar. Bu nedenle, alt çizgiler sayısal değerlerin tanımlanması ve kullanımı için geçerlidir.
+
+
+
+-------------------
+
+
 
