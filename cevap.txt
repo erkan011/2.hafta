@@ -297,5 +297,27 @@ Hangi operatörün kullanılması daha anlamlı olduğu, duruma ve gereksinimler
 -------------------
 
 
+13.Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+
+Kotlin programlama dilinde de benzer bir yapı vardır. Kotlin'de "Number" sınıfı, sayısal veri tiplerinin genel bir soyutlamasıdır ve farklı alt sınıflar aracılığıyla farklı sayı tiplerini temsil eder. Kotlin'de "Number" sınıfını miras alan ve farklı sayı tiplerini temsil eden alt sınıflar şunlardır:
+
+    Int (Tamsayılar): Tam sayıları temsil eder. Örneğin, 1, 100, -5 gibi.
+
+    Long (Uzun Tamsayılar): Uzun tam sayıları temsil eder. Büyük tamsayıları depolamak için kullanılır.
+
+    Float (Ondalıklı Sayılar): Ondalıklı sayıları temsil eder. Örneğin, 3.14, -0.001 gibi.
+
+    Double (Çift Hassasiyetli Ondalıklı Sayılar): Çift hassasiyetli ondalıklı sayıları temsil eder. Daha yüksek hassasiyet gerektiren hesaplamalar için kullanılır.
+
+    Short (Kısa Tamsayılar): Kısa tamsayıları temsil eder.
+
+    Byte (Bayt): Bayt değerlerini temsil eder.
+
+Bu alt sınıflar, farklı sayı tiplerini temsil eder ve her biri belirli bir değer aralığına sahiptir. Programlamanın gereksinimlerine ve matematiksel hesaplamaların doğasına göre uygun veri tipi seçilmelidir. Örneğin, bir döngü indeksi için "Int" tipi kullanılabilirken, finansal hesaplamalarda "Double" veya "Float" tipi daha uygun olabilir. Bu şekilde doğru veri tipini seçmek, programın doğruluğunu ve verimliliğini artırır.
+
+
+-------------------
+
 
 
