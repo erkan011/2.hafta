@@ -1314,4 +1314,35 @@ fun main() {
 
 
 
+50."val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+
+Bu işlemin sonucu ve tipi şu şekildedir:
+
+    İşlem: val x = 5 / 2.toDouble()
+        Bu işlem, öncelikle 2.toDouble() ifadesini değerlendirir. toDouble() fonksiyonu, bir tamsayı değerini double türüne dönüştürür. Yani, 2 değeri double türüne dönüştürülür ve sonuç olarak 2.0 elde edilir.
+        Daha sonra, 5 değeri ile 2.0 değeri arasında bir bölme işlemi gerçekleştirilir. Kotlin'de herhangi bir sayısal değerle double türünde bir değeri bölme işlemi, sonucun double türünde olmasını sağlar. Bu nedenle, bölme işlemi sonucu 2.5 olur ve bu değer x değişkenine atanır.
+
+    Eşitlik kontrolü: println(x == 2.5)
+        Bu ifade, x değişkeninin değerinin 2.5'e eşit olup olmadığını kontrol eder. x değişkeni 2.5'e eşit olduğu için, bu ifade true olarak değerlendirilir.
+
+Sonuç olarak, x değişkeninin değeri 2.5'tir ve println(x == 2.5) ifadesi true olarak değerlendirilir.
+
+kotlin
+
+fun main() {
+    val x = 5 / 2.toDouble()
+    println("x değeri: $x") // x değeri: 2.5
+    println("x == 2.5: ${x == 2.5}") // x == 2.5: true
+}
+
+
+Bu durum, işlem sonucunun ve eşitlik kontrolünün beklenen sonuçlarını yansıtmaktadır. İşlem sonucu double türünde olduğu için, eşitlik kontrolü de double türündeki bir değerle yapılır. Bu da doğru sonuca yol açar.
+
+
+
+-------------------
+
+
+
 
