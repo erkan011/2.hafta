@@ -795,3 +795,27 @@ Bu konunun önemi, programların bellek kullanımıyla, veri temsili ve işlemle
 
 
 
+32."İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+
+Kotlin dilinde işaretsiz değişkenlerin harf gösterimi Java'da olduğu gibi u ön ekiyle birlikte veri türü belirtilerek yapılır. İşaretsiz tamsayılar için genellikle U kullanılır. Örneğin:
+
+    8 bitlik işaretsiz bir tamsayı için: Byte veri türü yerine UByte kullanılır.
+    16 bitlik işaretsiz bir tamsayı için: Short veri türü yerine UShort kullanılır.
+    32 bitlik işaretsiz bir tamsayı için: Int veri türü yerine UInt kullanılır.
+    64 bitlik işaretsiz bir tamsayı için: Long veri türü yerine ULong kullanılır.
+
+Örnek olarak, işaretsiz 8 bitlik bir tamsayı değişkeni tanımlamak için:
+
+kotlin
+
+val unsignedByte: UByte = 10u
+
+Yukarıdaki örnekte, unsignedByte adında bir değişken oluşturulmuş ve bu değişkene 10 değeri atanmıştır. UByte veri türü kullanılarak bu değişkenin işaretsiz bir 8 bitlik tamsayı olduğu belirtilmiştir.
+
+
+
+-------------------
+
+
+
