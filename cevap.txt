@@ -912,5 +912,25 @@ Bu önlemler, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşm
 
 
 
+37."İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+
+İşaretsiz değişkenlerin sınırlamaları şunlardır:
+
+    Pozitif değerlerle sınırlıdır: İşaretsiz değişkenler, yalnızca pozitif tam sayı değerlerini temsil edebilirler. Bu nedenle, negatif değerlerin veya işaretli değerlerin kullanılması gereken durumlarda işaretsiz değişkenler uygun değildir.
+
+    Belirli bir aralığı temsil ederler: Her işaretsiz değişken türü, belirli bir sayı aralığını temsil edebilir. Örneğin, UByte 0 ile 255 arasındaki değerleri temsil ederken, ULong çok daha büyük bir aralığı temsil eder. Bu nedenle, işaretsiz değişkenlerin kullanıldığı yerlerde değer aralığına dikkat etmek önemlidir.
+
+    Taşma riski vardır: İşaretsiz değişkenlerle yapılan matematiksel işlemlerde, taşma (overflow) riski vardır. Bu durum, bir işlem sonucunun değişkenin temsil edebileceği maksimum değeri aşması durumunda ortaya çıkar. Taşma riski, uygun kontrollerin yapılmaması veya uygun veri türünün seçilmemesi durumunda beklenmedik sonuçlara yol açabilir.
+
+    Veri boyutu platforma bağlıdır: İşaretsiz değişkenlerin veri boyutu, kullanılan platforma ve derleme hedefine bağlıdır. Örneğin, 32 bit bir işletim sisteminde UInt 32 bitlik bir veri boyutuna sahip olabilirken, 64 bit bir işletim sisteminde aynı veri türü 64 bitlik bir veri boyutuna sahip olabilir. Bu nedenle, işaretsiz değişkenlerin veri boyutunun değişkenlik gösterebileceği unutulmamalıdır.
+
+Bu sınırlamalar göz önünde bulundurulmalı ve işaretsiz değişkenlerin kullanılacağı yerlerde uygun kontroller ve önlemler alınmalıdır.
+
+
+
+-------------------
+
+
 
 
