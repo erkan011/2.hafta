@@ -1285,4 +1285,33 @@ fun main() {
 
 
 
+49."val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+
+Bu işlemin sonucu ve tipi şu şekildedir:
+
+    İşlem: val x = 5L / 2
+        Bu işlem, bir bölme işlemidir. 5L ifadesi bir Long türüdür, yani bir Long tamsayıdır. 2 ifadesi ise bir Int türündedir. Kotlin'de tamsayı türleri arasında yapılan işlemlerde genişleyen dönüşüm (promotion) gerçekleşir. Yani, Int türündeki bir değer Long türüne otomatik olarak dönüştürülür. Bu nedenle, 2 ifadesi Long türüne dönüştürülür ve sonuç Long türünde alınır. Bölme işlemi sonucu olan 2, Long türünde tutulur ve x değişkenine atanır.
+
+    Eşitlik kontrolü: println(x == 2L)
+        Bu ifade, x değişkeninin değerinin 2L'ye (Long türünde) eşit olup olmadığını kontrol eder. x değişkeni 2L'ye eşit olduğu için, bu ifade true olarak değerlendirilir.
+
+Sonuç olarak, x değişkeninin değeri 2L'dir ve println(x == 2L) ifadesi true olarak değerlendirilir.
+
+Bu durum, işlem sonucunun ve eşitlik kontrolünün beklenen sonuçlarını yansıtmaktadır. İşlem sonucu Long türünde olduğu için, eşitlik kontrolü de Long türündeki bir değerle yapılır. Bu da doğru sonuca yol açar.
+
+kotlin
+
+fun main() {
+    val x = 5L / 2
+    println("x değeri: $x") // x değeri: 2
+    println("x == 2L: ${x == 2L}") // x == 2L: true
+}
+
+
+
+-------------------
+
+
+
 
