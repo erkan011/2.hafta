@@ -1201,4 +1201,24 @@ Bu fonksiyonlar, sayısal değişkenler arasında açık dönüşüm yapmak içi
 
 
 
+46."val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+
+Bu durumda, Kotlin'de "Long + Int" gibi bir işlemin sonucu, genişleyen dönüşüm (promotion) kuralı gereği daha geniş veri türü olan Long türünde olacaktır. Bu nedenle, result değişkeninin türü Long olacaktır.
+
+Nedeni şudur:
+
+    Operatörler arasında tür uyumlu olmalıdır. Bu durumda, bir taraf Long türünde bir değer içerirken, diğer taraf Int türünde bir değer içerir.
+
+    Kotlin, daha geniş bir veri türüne otomatik olarak dönüşüm yapar. Int türü, Long türüne dönüştürülebilir, çünkü Int türünün temsil ettiği sayılar Long türü tarafından da temsil edilebilir.
+
+Sonuç olarak, result değişkeninin türü Long olacaktır. İşlem sonucu 4 olduğu için, result değişkeninin değeri 4 olacaktır. Bu, Kotlin'in sayısal operatörler arasında tür dönüşümlerini otomatik olarak gerçekleştirmesi sayesindedir. Bu tür dönüşümler, genellikle genişleyen dönüşüm (promotion) olarak adlandırılır ve işlemlerin beklenen sonuçlarını korur.
+
+
+
+
+-------------------
+
+
+
 
