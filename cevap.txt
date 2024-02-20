@@ -890,4 +890,27 @@ Yukarıdaki örnekte, unsignedInt ve unsignedLong adında iki işaretsiz tamsay�
 
 
 
+36."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+
+
+Kotlin'de, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumlarına karşı varsayılan bir koruma mekanizması bulunmamaktadır. Bu, işaretsiz değişkenlerin taşıma hedefi aralığını aştıklarında veya sıfırın altında bir değer elde ettiklerinde, beklenmedik sonuçların oluşabileceği anlamına gelir.
+
+Ancak, Kotlin'de taşma durumlarına karşı önlem almak için bazı yöntemler bulunmaktadır:
+
+    Veri türünü doğru şekilde seçme: İşaretsiz değişkenlerin veri türünü seçerken, işlem yapılacak veri aralığının sınırlarını dikkate almak önemlidir. Büyük sayılarla çalışılacaksa, daha büyük bir işaretsiz veri türü seçmek, taşma riskini azaltabilir.
+
+    Taşma durumlarını kontrol etme: İşlemler öncesinde veya sonrasında taşma durumlarını kontrol ederek, beklenmedik sonuçların önüne geçilebilir. Bu, genellikle koşullu ifadeler veya kütüphane fonksiyonları kullanılarak yapılır.
+
+    Özel işlem mantığı uygulama: Bazı durumlarda, özel işlem mantığı uygulayarak taşma durumlarını kontrol etmek mümkündür. Örneğin, sayılar arasındaki işlemleri gerçekleştirmeden önce, işlemin sonucunun hedef aralıkta olup olmadığını kontrol edebilirsiniz.
+
+Bu önlemler, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma durumlarını kontrol etmek için kullanılabilir. Ancak, taşma durumlarına karşı tam bir koruma sağlamak için dikkatli planlama ve uygun algoritmaların kullanılması önemlidir.
+
+
+
+-------------------
+
+
+
+
 
