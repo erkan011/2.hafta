@@ -1256,4 +1256,33 @@ fun main() {
 
 
 
+48."val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+
+Bu işlemin sonucu ve tipi şu şekildedir:
+
+    İşlem: val x = 5 / 2
+        Bu işlem, bir bölme işlemidir. Kotlin'de tamsayı bölme işlemi yapıldığında, sonuç tamsayı olarak alınır ve ondalık kısmı kesilir. Yani, 5'in 2'ye bölümünden kalan bir ondalık sayı olmasına rağmen, sonuç 2 olarak alınır çünkü ondalık kısmı kesilir. Sonuç olarak, x değişkeni 2 değerini alır.
+
+    Eşitlik kontrolü: println(x == 2)
+        Bu ifade, x değişkeninin değerinin 2'ye eşit olup olmadığını kontrol eder. x değişkeni 2'ye eşit olduğu için, bu ifade true olarak değerlendirilir.
+
+Sonuç olarak, x değişkeninin değeri 2'dir ve println(x == 2) ifadesi true olarak değerlendirilir.
+
+Bu durum, tamsayı bölme işleminin sonucunun kesirli bir değer olmasına rağmen, Kotlin'de tamsayı bölme işleminin ondalık kısmını keserek tam sayı olarak sonuç vermesinden kaynaklanır. Bu nedenle, işlem sonucu ve eşitlik kontrolü sonucu beklenen değerlerdir.
+
+kotlin
+
+fun main() {
+    val x = 5 / 2
+    println("x değeri: $x") // x değeri: 2
+    println("x == 2: ${x == 2}") // x == 2: true
+}
+
+
+
+-------------------
+
+
+
 
