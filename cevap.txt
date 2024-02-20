@@ -1221,4 +1221,39 @@ Sonuç olarak, result değişkeninin türü Long olacaktır. İşlem sonucu 4 ol
 
 
 
+47."val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Bu durumda, result değişkeninin tipi Int olacaktır. Ancak, bu işlemin sonucu Int türünün sınırlarını aşacağı için beklenmeyen bir sonuç ortaya çıkacaktır.
+
+Nedeni şudur:
+
+    Int.MAX_VALUE değeri, Int türünün temsil edebileceği en büyük pozitif değerdir. Bu değer, 2147483647'dir.
+
+    Int.MAX_VALUE + Int.MAX_VALUE işlemi, 2147483647 + 2147483647 olarak ifade edilir.
+
+    Bu işlem sonucunda, toplam 4294967294 değerine eşit olacaktır.
+
+    Ancak, Int türünün maksimum değeri Int.MAX_VALUE'dir ve bu işlem sonucunda bu değeri aşacağı için beklenmeyen bir taşma (overflow) meydana gelir.
+
+Sonuç olarak, result değişkeninin değeri beklenmeyen bir taşma sonucu nedeniyle negatif bir değer olacaktır. Ancak, tür olarak hala Int olarak kalır çünkü işlemde kullanılan değerler Int türündedir. Bu tür dönüşümleri otomatik olarak gerçekleştirmek yerine, Kotlin bu durumu intikal etmektedir. Taşma durumlarında, beklenmeyen sonuçlarla karşılaşmamak için uygun taşma kontrolü yapılmalıdır. Bu nedenle, sonuç Int.MAX_VALUE'yi aşacaksa veya beklenmeyen bir değer alacaksa, daha geniş bir veri türü kullanılmalıdır, örneğin Long.
+
+kotlin
+
+fun main() {
+    val result: Long = Int.MAX_VALUE.toLong() + Int.MAX_VALUE.toLong()
+    println("Result: $result")
+
+    if (result > Int.MAX_VALUE) {
+        println("Taşma meydana geldi!")
+    } else {
+        println("Taşma olmadı.")
+    }
+}
+
+
+
+-------------------
+
+
+
 
