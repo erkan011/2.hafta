@@ -836,4 +836,26 @@ Bu değişkenlerin tipleri, belirli bir literalin ifade edebileceği en büyük 
 
 
 
+34."İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+
+"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+ChatGPT
+
+Kotlin'de işaretsiz Long veri tipi için harf gösterimi ULong şeklindedir. Yani işaretsiz Long bir değişken için ULong kullanılır.
+
+Örneğin:
+
+kotlin
+
+val unsignedLong: ULong = 100UL
+
+Yukarıdaki örnekte, unsignedLong adında bir işaretsiz Long değişkeni tanımlanmıştır. ULong kullanılarak bu değişkenin işaretsiz bir Long olduğu belirtilmiştir. Değer olarak 100 kullanılmış ve UL önekiyle işaretsiz bir Long olduğu ifade edilmiştir.
+
+
+
+-------------------
+
+
+
 
