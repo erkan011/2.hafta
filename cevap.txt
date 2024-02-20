@@ -1345,4 +1345,51 @@ Bu durum, işlem sonucunun ve eşitlik kontrolünün beklenen sonuçlarını yan
 
 
 
+51.Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+Kotlin'de tür dönüşümü sırasında dönüşümün başarısız olması durumunda bir TypeCastException hatası oluşabilir. Bu tür hataların ele alınması ve önlenmesi için şu önlemler alınabilir:
+
+    try-catch Bloklarıyla Yakalama: Dönüşüm sırasında oluşabilecek TypeCastException hatasını try-catch blokları kullanarak yakalayabilirsiniz. Bu sayede hatanın oluştuğu durumları belirleyebilir ve uygun şekilde ele alabilirsiniz.
+
+    kotlin
+
+try {
+    val number: Int = "abc".toInt()
+} catch (e: TypeCastException) {
+    println("Dönüşüm hatası: ${e.message}")
+}
+
+instanceof Operatörü ile Kontrol Etme: Dönüşüm yapmadan önce dönüşümün başarılı olup olmayacağını kontrol etmek için is veya as? operatörlerini kullanabilirsiniz. Bu sayede dönüşümün başarısız olması durumunda hata oluşmadan önce kontrol edilebilir.
+
+kotlin
+
+val input: Any = "123"
+if (input is String) {
+    val number: Int? = input.toIntOrNull()
+    if (number != null) {
+        println("Dönüşüm başarılı: $number")
+    } else {
+        println("Dönüşüm başarısız")
+    }
+} else {
+    println("Girilen değer bir String değil")
+}
+
+toIntOrNull() Gibi Güvenli Dönüşüm Fonksiyonlarını Kullanma: Kotlin standart kütüphanesindeki bazı dönüşüm fonksiyonları, dönüşüm başarısız olduğunda null değeri döndürür. Bu tür fonksiyonları kullanarak dönüşümü güvenli bir şekilde gerçekleştirebilir ve dönüşüm hatasını önleyebilirsiniz.
+
+kotlin
+
+    val number: Int? = "abc".toIntOrNull()
+    if (number != null) {
+        println("Dönüşüm başarılı: $number")
+    } else {
+        println("Dönüşüm başarısız")
+    }
+
+Bu önlemler, tür dönüşümü sırasında oluşabilecek TypeCastException hatasını ele almanıza ve bu tür hataların önüne geçmenize yardımcı olacaktır. Özellikle güvenli dönüşüm fonksiyonlarını kullanarak, dönüşüm işlemlerinin güvenli ve hatasız bir şekilde gerçekleştirilmesini sağlayabilirsiniz.
+
+
+-------------------
+
+
 
