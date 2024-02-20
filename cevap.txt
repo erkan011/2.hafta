@@ -1101,4 +1101,33 @@ Bu nedenle, Kotlin'de örtük tip genişletme yapılamaz ve sayısal dönüşüm
 
 
 
+43."val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+
+Bu durumda, Kotlin'de otomatik dönüşüm olmadığı için bir tür uyumsuzluğu hatası alırsınız. Kod şu şekilde olacaktır:
+
+kotlin
+
+val b: Byte = 1
+val i: Int = b
+print(b == i)
+
+Bu kodu çalıştırdığınızda, Kotlin derleyicisi hata verecektir. Hata, Byte türündeki bir değişkeni Int türüne otomatik olarak dönüştürmenin mümkün olmadığını belirten bir tür uyumsuzluğu hatasıdır.
+
+Kotlin, güvenlik ve tutarlılık ilkelerine odaklanarak otomatik tür dönüşümlerini engeller. Bu nedenle, Byte türündeki bir değişkeni Int türüne dönüştürmek için açık bir tür dönüşümü belirtmeniz gerekir. Örneğin:
+
+kotlin
+
+val b: Byte = 1
+val i: Int = b.toInt()
+print(b == i)
+
+Bu şekilde, Byte türündeki değişkeni Int türüne dönüştürür ve eşitlik kontrolünde hata almazsınız.
+
+
+
+-------------------
+
+
+
 
