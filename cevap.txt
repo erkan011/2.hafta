@@ -858,4 +858,36 @@ Yukarıdaki örnekte, unsignedLong adında bir işaretsiz Long değişkeni tanı
 
 
 
+35."İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+
+İşaretsiz değişkenlerin kullanım amaçları şunlardır:
+
+    Bellek kullanımını optimize etme: İşaretsiz değişkenler, işaretsiz tamsayıları temsil etmek için kullanılır ve genellikle yalnızca pozitif sayıları saklarlar. Bu, işaretli tamsayılara kıyasla daha geniş bir pozitif sayı aralığını temsil edebilirler. Dolayısıyla, sadece pozitif değerlere ihtiyaç duyulan durumlarda işaretsiz değişkenler kullanılarak bellek kullanımı optimize edilebilir.
+
+    Veri tutarlılığını sağlama: Bazı durumlarda, değerlerin negatif olmaması gerekebilir. Örneğin, bir boyut veya indeks değeri negatif olamaz. İşaretsiz değişkenler, bu tür durumlar için idealdir çünkü yalnızca pozitif değerler saklarlar ve negatif değerlerin temsil edilmesine izin vermezler. Bu şekilde, kodun daha tutarlı olması ve hata durumlarının azaltılması sağlanır.
+
+    Bit seviyesi işlemler: İşaretsiz değişkenler, genellikle bit seviyesinde işlemler için kullanılır. Örneğin, veri paketlerini işlerken veya donanım düzeyinde programlama yaparken, işaretsiz değişkenler bit seviyesinde işlemleri gerçekleştirmek için kullanışlı olabilir.
+
+    Veri bütünlüğünü sağlama: Bazı durumlarda, değerlerin taşmaması ve beklenmedik sonuçlar doğurmaması önemlidir. İşaretsiz değişkenler, belirli bir değer aralığını temsil eder ve bu aralık dışındaki değerlerin kabul edilmediğinden emin olmak için kullanılabilirler.
+
+Bu nedenlerden dolayı, işaretsiz değişkenler özellikle bellek kullanımı, veri tutarlılığı ve bit seviyesi işlemler gibi durumlarda yaygın olarak kullanılır.
+
+ Kotlin, işaretsiz tamsayılar için UByte, UShort, UInt ve ULong gibi veri türlerini destekler. Bu işaretsiz tamsayı veri türleri, yalnızca pozitif değerleri temsil eder ve negatif değerleri kabul etmez.
+
+Örneğin, işaretsiz bir tamsayı değişkeni tanımlamak için Kotlin'de aşağıdaki gibi kullanabilirsiniz:
+
+kotlin
+
+val unsignedInt: UInt = 100U
+val unsignedLong: ULong = 100UL
+
+Yukarıdaki örnekte, unsignedInt ve unsignedLong adında iki işaretsiz tamsayı değişkeni tanımlanmıştır. UInt ve ULong kullanılarak bu değişkenlerin işaretsiz tamsayılar olduğu belirtilmiştir. U öneki işaretsiz olduğunu gösterirken, UInt 32 bitlik ve ULong 64 bitlik işaretsiz tamsayıları temsil eder.
+
+
+
+-------------------
+
+
+
 
