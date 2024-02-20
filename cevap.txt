@@ -1047,4 +1047,41 @@ Bu sınırlamalara dikkat edilerek, akıllı dönüşüm özelliği verimli bir 
 
 
 
+41."Güvenli & Güvensiz" operatörler nelerdir?
+
+
+Kotlin'de "güvenli" ve "güvensiz" operatörler terim olarak kullanılmaz. Ancak, Kotlin'de null değerlerle çalışırken null güvenliği sağlamak için bir dizi operatör ve işaretçi bulunmaktadır. Bunlar arasında en önemlileri şunlardır:
+
+    Güvenli Çağırma Operatörü (Safe Call Operator): ?. işareti ile temsil edilir. Bu operatör, bir nesnenin null olup olmadığını kontrol eder ve null ise null dönüş yapar. Örneğin:
+
+    kotlin
+
+val length = nullableString?.length
+
+Yukarıdaki kodda, eğer nullableString null ise, null dönüş yapılır ve length değişkenine null atanır.
+
+Güvenli Atama Operatörü (Elvis Operatörü): ?: işareti ile temsil edilir. Bu operatör, bir ifade null ise, belirtilen alternatif değeri döndürür. Örneğin:
+
+kotlin
+
+val result = nullableValue ?: defaultValue
+
+Yukarıdaki kodda, nullableValue null ise, result değişkenine defaultValue atanır.
+
+Güvenli Dönüşüm Operatörü (Safe Cast Operator): as? işareti ile temsil edilir. Bu operatör, bir türün diğerine güvenli bir şekilde dönüştürülmesini sağlar. Eğer dönüşüm başarılı değilse, null dönüş yapar. Örneğin:
+
+kotlin
+
+    val stringLength: Int? = someValue as? String
+
+    Yukarıdaki kodda, eğer someValue bir String değilse, stringLength değişkenine null atanır.
+
+Bu operatörler, Kotlin'de null güvenliği sağlamak için kullanılır ve kodun null değerlerle daha güvenli bir şekilde çalışmasını sağlar. Bu sayede NullPointerException hatalarının önüne geçilir.
+
+
+
+-------------------
+
+
+
 
