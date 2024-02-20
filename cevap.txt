@@ -960,4 +960,47 @@ Bu adımlar, Kotlin'deki işaretsiz tamsayıları Java API'leri ile kullanırken
 
 
 
+39.is ve !is operatörlerinin kullanımını açıklayın.
+
+
+Kotlin'de is ve !is operatörleri tip kontrolü ve dönüşümü için kullanılır. İşte her birinin kullanımı ve işlevleri:
+
+    is Operatörü:
+
+    is operatörü, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır. Bu operatör, bir nesnenin belirli bir tipe dönüştürülüp dönüştürülemeyeceğini de kontrol eder. is operatörünün kullanımı şu şekildedir:
+
+    kotlin
+
+val obj: Any = "Merhaba"
+if (obj is String) {
+    println("obj bir String")
+} else {
+    println("obj bir String değil")
+}
+
+Yukarıdaki örnekte, obj değişkeninin bir String türüne ait olup olmadığı kontrol edilir. Eğer obj değişkeni bir String türüne aitse, "obj bir String" yazdırılır, aksi takdirde "obj bir String değil" yazdırılır.
+
+!is Operatörü:
+
+!is operatörü, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılır. Yani, is operatörünün tersi işlevi görür. !is operatörünün kullanımı şu şekildedir:
+
+kotlin
+
+    val obj: Any = 123
+    if (obj !is String) {
+        println("obj bir String değil")
+    } else {
+        println("obj bir String")
+    }
+
+    Yukarıdaki örnekte, obj değişkeninin bir String türüne ait olup olmadığı kontrol edilir. Eğer obj değişkeni bir String türüne ait değilse, "obj bir String değil" yazdırılır, aksi takdirde "obj bir String" yazdırılır.
+
+Bu operatörler, Kotlin'de tip güvenliği sağlamak ve türler arasında dönüşümleri kontrol etmek için yaygın olarak kullanılır. Bu sayede hata ayıklama ve kodun okunabilirliği artar ve güvenli bir kod geliştirme süreci sağlanır.
+
+
+
+-------------------
+
+
+
 
