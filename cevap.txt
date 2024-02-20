@@ -1003,4 +1003,48 @@ Bu operatörler, Kotlin'de tip güvenliği sağlamak ve türler arasında dönü
 
 
 
+40."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+
+"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tip güvenliği özelliğidir ve bir değişkenin tipini belirli bir koşul altında otomatik olarak dönüştürmesini sağlar. Bu özellik sayesinde, bir değişkenin belirli bir koşulu karşıladığı durumlarda, o değişkenin tipinin belirtilen tipe otomatik olarak dönüştürülmesi sağlanır. Bu, kodun okunabilirliğini artırır ve tip dönüşümleri için gereksiz tekrarları ortadan kaldırır. İşte birkaç örnek:
+
+Örnek 1:
+
+kotlin
+
+fun printLength(obj: Any) {
+    if (obj is String) {
+        println("String uzunluğu: ${obj.length}") // Akıllı dönüşüm: obj, burada String olarak tanımlanmıştır.
+    }
+}
+
+Yukarıdaki örnekte, printLength fonksiyonu bir Any türünden bir parametre alır. Ardından, bu parametrenin bir String türüne ait olup olmadığı kontrol edilir (obj is String). Eğer parametre bir String türüne aitse, koşul bloğu içinde obj değişkeni otomatik olarak bir String türüne dönüşür ve obj.length ifadesiyle String özellikleri kullanılabilir.
+
+Örnek 2:
+
+kotlin
+
+fun process(obj: Any) {
+    when (obj) {
+        is Int -> println("Int: $obj")
+        is String -> println("String: $obj")
+    }
+}
+
+Yukarıdaki örnekte, process fonksiyonu da bir Any türünden bir parametre alır. Ardından, when ifadesi ile parametrenin türü kontrol edilir. obj değişkeni is Int ile kontrol edilirse, obj değişkeni otomatik olarak bir Int türüne dönüşür ve koşul bloğunda bu türüne ait işlemler yapılabilir.
+
+"Akıllı Dönüşüm"ün bazı sınırlamaları vardır:
+
+    Koşullu ifadelerin dışında kullanılamaz: Akıllı dönüşüm, sadece belirli bir koşul altında gerçekleşir. Dolayısıyla, koşullu ifadelerin dışında (örneğin, bir if bloğunun dışında) kullanılamaz.
+
+    Karmaşık koşullarla kullanılamaz: Akıllı dönüşüm, genellikle basit koşullarla kullanılır. Karmaşık koşullarla (örneğin, && veya || operatörleri ile birleştirilmiş koşullar) kullanıldığında, derleyici bazen tip güvenliğini sağlayamayabilir ve akıllı dönüşüm yapamayabilir.
+
+Bu sınırlamalara dikkat edilerek, akıllı dönüşüm özelliği verimli bir şekilde kullanılabilir. Bu özellik, Kotlin'in tip güvenliğini artırmaya ve kodun daha okunabilir olmasını sağlamaya yardımcı olur.
+
+
+
+-------------------
+
+
+
 
