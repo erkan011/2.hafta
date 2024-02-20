@@ -819,3 +819,21 @@ Yukarıdaki örnekte, unsignedByte adında bir değişken oluşturulmuş ve bu d
 
 
 
+33."val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+
+Kotlin'de, val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu değişkenlerinin tipleri aşağıdaki gibi olacaktır:
+
+    val a1 = 42u: Bu ifadede, 42u işaretsiz bir tamsayı literali olarak tanımlanmıştır. Burada, u öneki, işaretsiz bir tamsayı olduğunu belirtir. Dolayısıyla, a1 değişkeninin tipi UInt (işaretsiz tamsayı) olacaktır.
+
+    val a2 = 0xFFFF_FFFF_FFFFu: Bu ifadede, 0xFFFF_FFFF_FFFFu işaretsiz bir 64 bitlik tamsayı literali olarak tanımlanmıştır. Benzer şekilde, u öneki, işaretsiz bir tamsayı olduğunu belirtir. Dolayısıyla, a2 değişkeninin tipi ULong (64 bitlik işaretsiz tamsayı) olacaktır.
+
+Bu değişkenlerin tipleri, belirli bir literalin ifade edebileceği en büyük tamsayı tipine göre belirlenir. 42u ifadesi 32 bitlik bir tamsayı sınırlarını aşmadığı için UInt tipine atanırken, 0xFFFF_FFFF_FFFFu ifadesi 32 bitlik tamsayı sınırlarını aşar, bu nedenle 64 bitlik bir tamsayı olan ULong tipine atanır.
+
+
+
+-------------------
+
+
+
+
