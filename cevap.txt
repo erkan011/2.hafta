@@ -1130,4 +1130,27 @@ Bu şekilde, Byte türündeki değişkeni Int türüne dönüştürür ve eşitl
 
 
 
+44."val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+
+Bu kodda, b adında bir Byte türünde değişken tanımlanır ve değeri 1 olarak atanır. Daha sonra, b değişkeni toInt() fonksiyonu aracılığıyla Int türüne dönüştürülerek i adında bir Int türünde değişkene atanır. Son olarak, b ve i değişkenleri arasında eşitlik kontrolü yapılır ve sonuç print() fonksiyonuyla ekrana yazdırılır.
+
+Ancak, Byte türünde bir değişken olan b, Int türüne dönüştürüldüğünde, otomatik bir tür dönüşümü gerçekleşir ve bu dönüşüm kayıpsızdır. Yani, 1 değeri Byte türünden Int türüne dönüştürüldüğünde herhangi bir veri kaybı olmaz. Sonuç olarak, b ve i değişkenleri eşit değere sahip olacaktır ve print(b == i) ifadesi true olarak değerlendirilecektir.
+
+Bu nedenle, çıktı olarak true alırsınız çünkü b ve i değişkenleri aynı değere sahiptir.
+
+kotlin
+
+fun main() {
+    val b: Byte = 1
+    val i: Int = b.toInt()
+    print(b == i)
+}
+
+
+
+-------------------
+
+
+
 
