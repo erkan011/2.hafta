@@ -759,4 +759,23 @@ Ancak, belirli bir yuvarlama davranışının yerleşik olarak değiştirilmesi,
 
 
 
+30."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+
+"İşaretsiz" (unsigned) ve "işaretli" (signed) değişkenler, bilgisayar programlama dillerinde veri türlerini tanımlamak için kullanılan terimlerdir. Bu terimler, değişkenlerin saklayabileceği değerlerin aralığı ve şekli ile ilgilidir.
+
+    İşaretli Değişkenler (Signed Variables):
+    İşaretli değişkenler, pozitif ve negatif değerleri temsil edebilirler. Örneğin, bir işaretli 8 bitlik bir tamsayı değişkeni (-128 ile 127 arasında) kullanılıyorsa, bu değişken -128'den 127'ye kadar olan tam sayıları temsil edebilir.
+
+    İşaretsiz Değişkenler (Unsigned Variables):
+    İşaretsiz değişkenler ise yalnızca pozitif değerleri temsil edebilirler. Örneğin, işaretsiz 8 bitlik bir tamsayı değişkeni (0 ile 255 arasında) kullanılıyorsa, bu değişken sadece 0'dan 255'e kadar olan tam sayıları temsil edebilir.
+
+İşaretli ve işaretsiz değişkenler arasındaki ana fark, temsil edebilecekleri değerlerin aralığıdır. İşaretli değişkenler, negatif ve pozitif değerleri saklayabilirken, işaretsiz değişkenler sadece pozitif değerleri saklayabilir. Bu nedenle, işaretsiz değişkenler genellikle sıfırdan büyük sayıları temsil etmek için kullanılırken, işaretli değişkenler negatif ve pozitif sayıları temsil etmek için kullanılır.
+
+
+
+-------------------
+
+
+
 
